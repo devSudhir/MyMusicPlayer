@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Music</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+    <link rel="stylesheet" href="myPlayer.css" />
+    <script src="myPlayer.js" defer></script>
+  </head>
+  <body onload="draw()">
+    <h1>My Music</h1>
+    <!-- Tags -->
+    <div id="tag">
+      <p class="text text_one one">Introduction</p>
+      <div class="line line_one one"></div>
+      <div class="circle circle_one one"></div>
+      <p class="text text_two two">one_six</p>
+      <div class="line line_two two"></div>
+      <div class="circle circle_two two"></div>
+      <p class="text text_three three">Rapport Building - Energy</p>
+      <div class="line line_three three"></div>
+      <div class="circle circle_three three"></div>
+      <p class="text text_four four">Rapport Building - Empathy</p>
+      <div class="line line_four four"></div>
+      <div class="circle circle_four four"></div>
+      <p class="text text_five five">Polite</p>
+      <div class="line line_five five"></div>
+      <div class="circle circle_five five"></div>
+    </div>
+
+    <!-- canavas -->
+    <canvas id="myCanvas" width="400" height="300"> </canvas>
+
+    <!-- timer -->
+    <div id="audio_player">
+      <div id="timer">
+        <h6 class="current-time" style="float: left">00:00</h6>
+        <h6 class="total-duration" style="float: right">00:00</h6>
+      </div>
+
+      <!-- controls &-->
+
+      <div id="controls">
+        <span onmouseover="showVolumeRange()" onmouseout="showVolumeRange(0)">
+          <input
+            type="range"
+            class="volume_slider"
+            min="0"
+            max="100"
+            value="80"
+          />
+          <i class="fas fa-volume-up volumeButton" style="color: #56ccf0"></i>
+        </span>
+        <span onclick="playPause()">
+          <i
+            id="control"
+            class="fas fa-play-circle playpause-track fa-2x"
+            style="color: #56ccf0"
+          ></i>
+        </span>
+        <span onclick="forwardAudio()">
+          <i class="fas fa-forward forward-track" style="color: #56ccf0"></i>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
