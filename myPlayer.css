@@ -37,6 +37,7 @@ body {
 /* Shadow Heading */
 h1 {
   text-shadow: 5px 5px 20px #000000;
+  margin:0;
 }
 #myCanvas {
   display: block;
